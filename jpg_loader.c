@@ -1,5 +1,5 @@
 # include "jpg_loader.h"
-mdl_i8_t load_jpg(char const *__filepth, struct jpg_loader_t *__jpg_loader) {
+mdl_i8_t load_jpg(char const *__filepth, struct jpg_loader *__jpg_loader) {
 	int fd;
 	if ((fd = open(__filepth, O_RDONLY)) < 0) {
 		fprintf(stderr, "failed to open file at '%s', errno: %d\n", __filepth, errno);
